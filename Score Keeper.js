@@ -12,8 +12,7 @@ p1.addEventListener('click', function(e){
     p1Score+=1;
     p1Display.innerText = p1Score;
     let no = matches.value;
-    let par = Math.ceil(no/2)
-    if(p1Score >= par){
+    if(p1Score == no){
         p1Display.classList.toggle('green');
         p2Display.classList.toggle('red');
         p1.classList.toggle('disabled');
@@ -24,9 +23,8 @@ p1.addEventListener('click', function(e){
 p2.addEventListener('click', function(e){
     p2Score+=1;
     p2Display.innerText = p2Score;
-    let no = matches.value;
-    let par = Math.ceil(no/2)
-    if(p2Score >= par){
+    let no2 = matches.value;
+    if(p2Score == no2){
         p2Display.classList.toggle('green');
         p1Display.classList.toggle('red');
         p2.classList.toggle('disabled');
